@@ -1,15 +1,16 @@
 .container
   = @articles.each do |article|
-    .card
-      .card_image
-        = image_tag 'Photo.png'
-      .card_content
-        .card_title
-          = article.title
-        .card_comment
-          = image_tag 'Shape.png'
-          %span 23
-        .card_detail
-          = image_tag 'Oval.png'
-          %div
+    = link_to article_path(article)  do
+      .card
+        .card_image
+          = image_tag 'Photo.png'
+        .card_content
+          .card_title
+            = article.title
+          .card_comment
+            = image_tag 'Shape.png'
+            %span 23
+          .card_detail
+            = image_tag 'Oval.png'
+            %div
           
