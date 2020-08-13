@@ -12,6 +12,7 @@
       = image_tag 'Combined Shape.svg', class: 'dropbtn'
       .dropdown-content.mini
         = link_to 'Edit', edit_article_path(@article)
+        = link_to 'Delete', article_path(@article), data: { method: 'delete', confirm: 'Delete OK？' }
   .article_content
     = @article.content
   .article_heart
