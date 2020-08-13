@@ -8,6 +8,7 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     %meta{:content => "width=device-width,initial-scale=1.0", :name => "viewport"}/
+
   %body
     %header.header
       %p.header_pageTitle Boards
@@ -18,4 +19,8 @@
           %a{:href => "#"} ログアウト
     %p.notice= notice
     %p.alert= alert
+    - if flash.present?
+      .flash
+        - flash.each do |key, value|
+          %div{:class => key}= value
     = yield

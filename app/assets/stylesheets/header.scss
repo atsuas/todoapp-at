@@ -7,13 +7,13 @@ $header-padding-y: 16px;
   display: flex;
   justify-content: space-between;
   background-color: $primary-color;
-  padding: $header-padding-y 16px;
+  padding: 14px 14px;
   font-weight: bold;
 
   &_pageTitle {
-    color: black;
+    color: gray;
     line-height: $avatar-size;
-    font-size: $font-lg;
+    font-size: 13px;
   }
 
   &_avatar {
@@ -23,37 +23,3 @@ $header-padding-y: 16px;
   }
 }
 
-.dropbtn {
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  font-weight: normal;
-  display: none;
-  right: 0;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  padding: 8px 16px;
-  text-decoration: none;
-  display: block;
-  color: $text-base-color;
-}
-
-.dropdown-content a:hover {
-  background-color: white;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}

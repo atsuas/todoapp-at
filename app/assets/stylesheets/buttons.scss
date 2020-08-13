@@ -1,0 +1,13 @@
+@import './variables';
+
+.btn-primary {
+    background-color: $primary-color;
+    border:solid 1px #EBEBEB;
+    width: 100%;
+    text-align: center;
+    color: gray;
+    padding: 16px 0;
+    font-weight: bold;
+    background-color: khaki;
+    margin-top: 300px;
+  }
