@@ -5,6 +5,12 @@
     %div
       %p cohki0305
       %p 2020/4/16
+  .article_detail_actions
+    .dropdown
+      = image_tag 'Combined Shape.svg', class: 'dropbtn'
+      .dropdown-content.mini
+        = link_to 'Edit'
+        = link_to 'destroy'
   .article_content
     = @article.content
   .article_heart

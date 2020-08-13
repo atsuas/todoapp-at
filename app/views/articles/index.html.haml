@@ -1,4 +1,5 @@
 .container
+  %h2 All Boards
   = @articles.each do |article|
     = link_to article_path(article)  do
       .card
