@@ -3,14 +3,17 @@
   = @articles.each do |article|
     = link_to article_path(article)  do
       .card
-        .card_image
-          = image_tag 'Photo.png'
+        -# .card_image
+        -#   = image_tag 'Photo.png'
         .card_content
           .card_title
+            %p Brackets
+        .card_content
+          .card_text
             = article.title
-          .card_comment
-            = image_tag 'Shape.png'
-            %span 23
+          -# .card_comment
+          -#   = image_tag 'Shape.png'
+          -#   %span 23
           .card_detail
             = image_tag 'Oval.png'
 .container           

@@ -1,3 +1,5 @@
+.container
+  %h2 Brackets
 .article
   %h1.article_title= @article.title
   .article_detail
@@ -9,8 +11,7 @@
     .dropdown
       = image_tag 'Combined Shape.svg', class: 'dropbtn'
       .dropdown-content.mini
-        = link_to 'Edit'
-        = link_to 'destroy'
+        = link_to 'Edit', edit_article_path(@article)
   .article_content
     = @article.content
   .article_heart
