@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :boards
+  resources :cards
 end

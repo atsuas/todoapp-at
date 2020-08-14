@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
-    def new
-        article = Article.find(params[:article_id])
+    def show
+        @article = Article.find(params[:id])
     end
 
 end
