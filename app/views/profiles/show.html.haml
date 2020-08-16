@@ -1,0 +1,17 @@
+.container.profilePage
+  .profilePage_user
+    .profilePage_user_image
+      = image_tag 'Oval.png'
+    .profilePage_user_basicInfo
+      .profilePage_user_name
+        .profilePage_user_displayName
+          = current_model.display_name
+        .profilePage_user_actionButton
+          = link_to 'Edit', edit_profile_path
+      .profilePage_user_introduction
+        =current_model.profile&.introduction
+
+  - current_model.articles.each do |article|
+    = render 'article', article: article
+    
+        

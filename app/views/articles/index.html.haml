@@ -1,6 +1,6 @@
 .container
   %h2 All Boards
-  = @articles.each do |article|
+  - @articles.each do |article|
     = render 'article', article: article
   
 .container           
