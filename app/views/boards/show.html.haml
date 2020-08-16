@@ -17,8 +17,16 @@
     %div
   .article_heart
     = image_tag 'Shape.png'
+
+.article
+  .article_list
+    %h2 List of comments
+    - @comments.each do |comment|
+      .article_comment
+        %p= comment.content
+
 .container           
-  = link_to new_article_path do
+  = link_to new_board_comment_path(@article) do
     .card
       .card_content
         .card_create
