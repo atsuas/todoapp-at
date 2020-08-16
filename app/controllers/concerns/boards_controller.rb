@@ -4,4 +4,9 @@ class BoardsController < ApplicationController
         @comments = @article.comments
     end
 
+    private
+    def board_params
+        params.require(:board).permit(:title, :content, :eyecatch)
+    end
+
 end
