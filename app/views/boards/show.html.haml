@@ -1,0 +1,33 @@
+.container
+  %h2 Brackets
+  .article_image
+    = image_tag 'Photo.png'
+.article
+  %h1.article_title= @article.title
+  .article_detail_actions
+    .dropdown
+      = image_tag 'Combined Shape.svg', class: 'dropbtn'
+      .dropdown-content.mini
+        = link_to 'Edit', edit_article_path(@article)
+        = link_to 'Delete', article_path(@article), data: { method: 'delete', confirm: 'Delete OK？' }
+  .article_content
+    = @article.content
+  .article_detail
+    = image_tag 'Oval1.png'
+    %div
+  .article_heart
+    = image_tag 'Shape.png'
+
+.article
+  .article_list
+    %h2 List of comments
+    - @comments.each do |comment|
+      .article_comment
+        %p= comment.content
+
+.container           
+  = link_to new_board_comment_path(@article) do
+    .card
+      .card_content
+        .card_create
+          %h1 +Add new comment
