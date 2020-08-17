@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
     before_action :authenticate_model!, only: [:new, :create, :edit, :update, :destroy]
 
     def index
-        @articles = Article.all
+        @articles = Article.all.order("id DESC")
+        
     end
 
     def show
