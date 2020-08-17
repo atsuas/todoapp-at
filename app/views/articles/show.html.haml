@@ -2,6 +2,8 @@
   %h2 Brackets
 = link_to board_path(@article)  do
   .article
+    - @articles.each do |article|
+      = render 'article', article: article
     - if @article.eyecatch.attached?
       .article_image
         = image_tag @article.eyecatch
@@ -19,7 +21,7 @@
       = image_tag 'Oval1.png'
     
 .container           
-  = link_to new_card_path do
+  = link_to new_article_path do
     .card
       .card_content
         .card_create
