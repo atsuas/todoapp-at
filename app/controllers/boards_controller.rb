@@ -1,6 +1,6 @@
 class BoardsController < ApplicationController
     def show
-        @article = Article.find(params[:id])
+        @article = Article.where(params[:id])
         @comments = @article.comments
     end
 
