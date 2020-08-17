@@ -1,5 +1,7 @@
 .container
   %h2 Brackets
+- @articles.each do |article|
+  = render 'article', article: article
 = link_to board_path(@articles) do
   .article
     - if @article.eyecatch.attached?
