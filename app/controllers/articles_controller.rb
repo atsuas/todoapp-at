@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
     end
 
     def show
-        @articles = Article.where(params[:id])
+        @articles = Article.where('id >= ?', params[:id])
     end
 
     def new

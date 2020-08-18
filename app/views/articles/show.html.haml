@@ -1,24 +1,24 @@
 .container
   %h2 Brackets
-- @articles.each do |article|
-  = render 'article', article: article
-= link_to board_path(@articles) do
-  .article
-    - if @article.eyecatch.attached?
-      .article_image
-        = image_tag @article.eyecatch
-    %h1.article_title= @article.title
-    - if model_signed_in? && current_model.has_written?(@article)
-      .article_detail_actions
-        .dropdown
-          = image_tag 'Combined Shape.svg', class: 'dropbtn'
-          .dropdown-content.mini
-            = link_to 'Edit', edit_article_path(@article)
-            = link_to 'Delete', article_path(@article), data: { method: 'delete', confirm: 'Delete OK？' }
-    .article_content
-      = @article.content
-    .article_detail
-      = image_tag 'Oval1.png'
+  = link_to board_path(@articles)  do
+    - @articles.each do |article|
+      = render 'article', article: article
+  -# .article
+  -#   - if @article.eyecatch.attached?
+  -#     .article_image
+  -#       = image_tag @article.eyecatch
+  -#   %h1.article_title= @article.title
+  -#   - if model_signed_in? && current_model.has_written?(@article)
+  -#     .article_detail_actions
+  -#       .dropdown
+  -#         = image_tag 'Combined Shape.svg', class: 'dropbtn'
+  -#         .dropdown-content.mini
+  -#           = link_to 'Edit', edit_article_path(@article)
+  -#           = link_to 'Delete', article_path(@article), data: { method: 'delete', confirm: 'Delete OK？' }
+  -#   .article_content
+  -#     = @article.content
+  -#   .article_detail
+  -#     = image_tag 'Oval1.png'
     
 .container           
   = link_to new_article_path do
