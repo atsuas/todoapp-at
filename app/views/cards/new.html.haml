@@ -5,10 +5,6 @@
 
   = form_with(model: @card, url: article_cards_path(@card.article), local: true) do |f|
     %div
-      = f.label :eyecatch, 'アイキャッチ'
-    %div
-      = f.file_field :eyecatch
-    %div
       = f.label :title, 'Name'
     %div
       = f.text_field :title, class: 'text'
