@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+    before_action :set_article, only: [:show]
     before_action :authenticate_model!, only: [:new, :create, :edit, :update, :destroy]
 
     def index
@@ -7,11 +8,12 @@ class ArticlesController < ApplicationController
     end
 
     def show
-        @articles = Article.where('id >= ?', params[:id])
+        @cards = @article.cards
     end
 
     def new
         @article = current_model.articles.build
+
     end
 
     def create
@@ -50,4 +52,7 @@ class ArticlesController < ApplicationController
         params.require(:article).permit(:title, :content, :eyecatch)
     end
 
+    def set_article
+        @article = Article.find(params[:id])
+    end
 end

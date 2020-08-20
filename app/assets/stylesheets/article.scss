@@ -20,12 +20,26 @@ $container-padding: 16px;
   &_comment {
     padding: 12px;
   }
+
+  &_card_title {
+    padding-top: 50px;
+    padding-left: 10px;
+    font-weight: bold;
+    opacity: 0.9;
+    // font-family: serif;
+  }
+
+  &_card_content {
+   padding-left: 10px;
+  //  font-family: serif;
+  }
   
   &_image {
     height: 200px;
     position: relative;
     overflow: hidden;
     margin: 1px * -1 1px * -1 0px;
+    
 
     img {
       position: absolute;

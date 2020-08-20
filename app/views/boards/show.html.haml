@@ -1,5 +1,5 @@
 .container
-  %h2 card
+  %h2 Card
   .article_detail_actions
     -# .dropdown
     -#   = image_tag 'Combined Shape.svg', class: 'dropbtn'
@@ -21,8 +21,9 @@
   .article_list
     %h2 List of comments
     - @comments.each do |comment|
-      .article_comment
-        %p= comment.content
+      %ul
+        .article_comment
+          %li= comment.content
 
 .container           
   = link_to new_board_comment_path(@article) do

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'articles#index'
 
   resources :articles do
-    resources :boards, only: [:new, :create]
+    resources :cards, only: [:new, :create]
   end
   resources :boards do
     resources :comments, only: [:new, :create]
